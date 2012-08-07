@@ -1,4 +1,13 @@
 parallel-commands
 =================
+Async parallel queue for commands. 
 
-Async parallel queue for commands. Needs testing....
+```javascript
+
+parallel-commands = require('parallel-commands')([cmnd0,cmnd1],triggerMeWhenDone);
+
+parallel-commands.addCommand(cmnd3);
+parallel-commands.addCommandAt(2,cmnd2);
+parallel-commands.execute();
+
+```
