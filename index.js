@@ -1,16 +1,13 @@
 async = require('async');
 
-var parallel-commands = module.exports = function (opts, cb) {
-    if (typeof opts === 'object') {
+var parallelCommands = module.exports = function (opts, cb) {
+
         return new ParallelCommands(opts, cb);
-    }
-    else {
-        return new ParallelCommands(cb, opts);
-    }
 };
 
 function ParallelCommands (cmnds,cb){
-	if (!cmnds) this.commands = [];
+	if (!cmnds) this.commands = []; 
+    else {  this.commands = cmnds};
 	this.callback = cb;
 }
 
