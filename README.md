@@ -1,4 +1,4 @@
 parallel-commands
 =================
 
-Async parallel queue for commands. Under heavy development.
+Async parallel queue for commands. Needs testing....
