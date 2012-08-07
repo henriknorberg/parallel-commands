@@ -15,7 +15,7 @@ function ParallelCommands (cmnds,cb){
 }
 
 ParallelCommands.prototype.addCommand = function(cmnd){
-	this.addCommandAt(cmnd);
+	this.commands.push(cmnd);
 };
 
 ParallelCommands.prototype.addCommandAt = function(indx,cmnd){
