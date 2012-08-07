@@ -1,3 +1,4 @@
+async = require('async');
 
 var parallel-commands = module.exports = function (opts, cb) {
     if (typeof opts === 'object') {
@@ -8,8 +9,9 @@ var parallel-commands = module.exports = function (opts, cb) {
     }
 };
 
-function ParallelCommands (cmnds){
-	 if (!cmnds) this.commands = [];
+function ParallelCommands (cmnds,cb){
+	if (!cmnds) this.commands = [];
+	this.callback = cb;
 }
 
 ParallelCommands.prototype.addCommand = function(cmnd){
@@ -21,5 +23,5 @@ ParallelCommands.prototype.addCommandAt = function(indx,cmnd){
 };
 
 ParallelCommands.prototype.execute = function(){
-//Insert async here
+	async.parallel(this.commands, this.callback);
 };
