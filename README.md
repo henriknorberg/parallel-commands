@@ -4,10 +4,10 @@ Async parallel queue for commands.
 
 ```javascript
 
-parallel-commands = require('parallel-commands')([cmnd0,cmnd1],triggerMeWhenDone);
+parallelCommands = require('parallel-commands')([cmnd0,cmnd1],triggerMeWhenDone);
 
-parallel-commands.addCommand(cmnd3);
-parallel-commands.addCommandAt(2,cmnd2);
-parallel-commands.execute();
+parallelCommands.addCommand(cmnd3);
+parallelCommands.addCommandAt(2,cmnd2);
+parallelCommands.execute();
 
 ```
