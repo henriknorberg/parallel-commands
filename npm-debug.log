@@ -1,0 +1,85 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@1.1.32
+3 info using node@v0.8.0
+4 verbose config file /home/myoko/.npmrc
+5 verbose config file /usr/local/etc/npmrc
+6 verbose config file /usr/local/lib/node_modules/npm/npmrc
+7 verbose publish [ '.' ]
+8 verbose read json /media/docs/fatcap/projecter/jstests/nodetests/playground/parallel-commands/package.json
+9 verbose cache add [ '.', null ]
+10 silly cache add name=undefined spec="." args=[".",null]
+11 verbose parsed url { pathname: '.', path: '.', href: '.' }
+12 verbose read json package.json
+13 verbose tar pack [ '/home/myoko/tmp/npm-1344465393172/1344465393172-0.2812606052029878/tmp.tgz',
+13 verbose tar pack   '.' ]
+14 verbose tarball /home/myoko/tmp/npm-1344465393172/1344465393172-0.2812606052029878/tmp.tgz
+15 verbose folder .
+16 info prepublish parallel-commands@0.0.4
+17 verbose tar unpack /home/myoko/tmp/npm-1344465393172/1344465393172-0.2812606052029878/tmp.tgz
+18 silly gunzTarPerm modes [ '755', '644' ]
+19 silly gunzTarPerm extractEntry package.json
+20 silly gunzTarPerm modified mode [ 'package.json', 511, 493 ]
+21 silly gunzTarPerm extractEntry README.md
+22 silly gunzTarPerm modified mode [ 'README.md', 511, 493 ]
+23 silly gunzTarPerm extractEntry index.js
+24 silly gunzTarPerm modified mode [ 'index.js', 511, 493 ]
+25 silly gunzTarPerm extractEntry tests/integrationTest.js
+26 silly gunzTarPerm modified mode [ 'tests/integrationTest.js', 511, 493 ]
+27 verbose read json /home/myoko/tmp/npm-1344465393172/1344465393172-0.2812606052029878/package/package.json
+28 verbose from cache /home/myoko/tmp/npm-1344465393172/1344465393172-0.2812606052029878/package/package.json
+29 verbose tar pack [ '/home/myoko/.npm/parallel-commands/0.0.4/package.tgz',
+29 verbose tar pack   '/home/myoko/tmp/npm-1344465393172/1344465393172-0.2812606052029878/package' ]
+30 verbose tarball /home/myoko/.npm/parallel-commands/0.0.4/package.tgz
+31 verbose folder /home/myoko/tmp/npm-1344465393172/1344465393172-0.2812606052029878/package
+32 verbose tar unpack /home/myoko/.npm/parallel-commands/0.0.4/package.tgz
+33 silly gunzTarPerm modes [ '755', '644' ]
+34 silly gunzTarPerm extractEntry package.json
+35 silly gunzTarPerm extractEntry README.md
+36 silly gunzTarPerm extractEntry index.js
+37 silly gunzTarPerm extractEntry tests/integrationTest.js
+38 verbose read json /home/myoko/.npm/parallel-commands/0.0.4/package/package.json
+39 silly shasum updated bytes 1302
+40 info shasum 79a8d6f89eb3a01d2ba6a0b7ce5ad7720aa736a0
+40 info shasum /home/myoko/.npm/parallel-commands/0.0.4/package.tgz
+41 verbose from cache /home/myoko/.npm/parallel-commands/0.0.4/package/package.json
+42 verbose chmod /home/myoko/.npm/parallel-commands/0.0.4/package.tgz 644
+43 verbose chown /home/myoko/.npm/parallel-commands/0.0.4/package.tgz [ 1000, 1000 ]
+44 silly publish { name: 'parallel-commands',
+44 silly publish   version: '0.0.4',
+44 silly publish   description: 'Async parallel commands',
+44 silly publish   main: 'index.js',
+44 silly publish   directories: { test: 'tests' },
+44 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+44 silly publish   repository:
+44 silly publish    { type: 'git',
+44 silly publish      url: 'https://github.com/henriknorberg/parallel-commands.git' },
+44 silly publish   keywords: [ 'async', 'flow', 'controll', 'queue', 'commands' ],
+44 silly publish   dependencies: { async: '*' },
+44 silly publish   author: { name: 'Henrik A. Norberg' },
+44 silly publish   license: 'MIT',
+44 silly publish   readme: 'parallel-commands\n=================\nAsync parallel queue for commands. \n\n```javascript\n\nparallelCommands = require(\'parallel-commands\')([cmnd0,cmnd1],triggerMeWhenDone);\n\nparallelCommands.addCommand(cmnd3);\nparallelCommands.addCommandAt(2,cmnd2);\nparallelCommands.execute();\n\n```\n',
+44 silly publish   _id: 'parallel-commands@0.0.4',
+44 silly publish   dist: { shasum: '79a8d6f89eb3a01d2ba6a0b7ce5ad7720aa736a0' } }
+45 verbose url raw parallel-commands
+46 verbose url resolving [ 'https://registry.npmjs.org/', './parallel-commands' ]
+47 verbose url resolved https://registry.npmjs.org/parallel-commands
+48 http PUT https://registry.npmjs.org/parallel-commands
+49 http 409 https://registry.npmjs.org/parallel-commands
+50 verbose url raw parallel-commands
+51 verbose url resolving [ 'https://registry.npmjs.org/', './parallel-commands' ]
+52 verbose url resolved https://registry.npmjs.org/parallel-commands
+53 http GET https://registry.npmjs.org/parallel-commands
+54 http 200 https://registry.npmjs.org/parallel-commands
+55 error publish fail Cannot publish over existing version.
+55 error publish fail Bump the 'version' field, set the --force flag, or
+55 error publish fail     npm unpublish 'parallel-commands@0.0.4'
+55 error publish fail and try again
+56 error System Linux 3.2.0-29-generic-pae
+57 error command "node" "/usr/local/bin/npm" "publish"
+58 error cwd /media/docs/fatcap/projecter/jstests/nodetests/playground/parallel-commands
+59 error node -v v0.8.0
+60 error npm -v 1.1.32
+61 error code EPUBLISHCONFLICT
+62 error message publish fail
+63 verbose exit [ 1, true ]

@@ -1,4 +1,4 @@
-async = require('async');
+var async = require('async');
 
 var parallelCommands = module.exports = function (opts, cb) {
 
@@ -6,7 +6,7 @@ var parallelCommands = module.exports = function (opts, cb) {
 };
 
 function ParallelCommands (cmnds,cb){
-   
+   	 var that = this;
      this.commands = [];
 
     // Please refactor into addCommandAt
@@ -21,6 +21,12 @@ function ParallelCommands (cmnds,cb){
     });
    
     this.callback = cb;
+
+    this.execute = function(cllbck){
+        async.parallel(that.commands, that.callback);
+       
+        if (typeof cllbck === "function") cllbck(null);
+    };
 }
 
 ParallelCommands.prototype.addCommand = function(cmnd){
@@ -42,6 +48,3 @@ ParallelCommands.prototype.addCommandAt = function(indx,cmnd){
 
 };
 
-ParallelCommands.prototype.execute = function(){
-	async.parallel(this.commands, this.callback);
-};
