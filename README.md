@@ -1,6 +1,6 @@
 parallel-commands
 =================
-Async parallel queue for commands. 
+Async parallel queue for commands in node.js. 
 
 ```javascript
 
